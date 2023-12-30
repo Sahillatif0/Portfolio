@@ -254,7 +254,7 @@ body{
     height: max-content;
     background: rgba(220, 220, 220, .5);
     border-radius: 10px;
-    transition: all 2s,box-shadow 1s;
+    transition: all 1s;
     margin: 20px;
     margin-top: 0;
     align-items: center;
@@ -525,5 +525,7 @@ display: flex;
 .skill h1{
     white-space: nowrap;
 }
-
+.skillsp{
+    display: none !important;
+}
 }
