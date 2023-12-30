@@ -385,9 +385,10 @@ display: flex;
   }
   
   .card3 {
-    background-image: url("https://assets.codepen.io/489403/egypt.jpg");
+    background-image: url("media/landing.jpg");
     background-repeat: no-repeat;
     background-size: 140% 100%;
+    background-position: -24px;
   }
   
   .ring:before,
