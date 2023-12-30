@@ -234,7 +234,7 @@ body{
     border-radius: 50%;
     opacity: 1;
     transition: all 5s;
-    z-index: -2;
+    z-index: 0;
 }
 .sections h1, .sections p{
     margin: 10px 50px;
@@ -269,7 +269,9 @@ body{
     margin-top: 5px !important;
     margin-bottom: 5px !important;
 }
-
+.skill h1{
+    white-space: nowrap;
+}
 .space{
     display: flex;
     width: 100vw;
@@ -382,9 +384,9 @@ display: flex;
     background-image: url("media/cheetay.png");
     background-size: 250% 100%;
     background-position: -84px;
-  }
-  
-  .card3 {
+}
+
+.card3 {
     background-image: url("media/landing.jpg");
     background-repeat: no-repeat;
     background-size: 140% 100%;
@@ -487,6 +489,7 @@ display: flex;
 }
 .rightNav{
     width: max-content;
+    margin-right: 3%;
 }
 .navbtns{
     min-width: 90px;
