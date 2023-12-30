@@ -519,13 +519,15 @@ display: flex;
     width: 70%;
     height: max-content;
 }
-.skill p{
+.skill p, .sections p{
     text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .skill h1{
     white-space: nowrap;
 }
-.skillsp{
+#skillsp{
     display: none !important;
 }
 }
