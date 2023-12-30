@@ -1,0 +1,525 @@
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+.mainCont{
+    display: flex;
+    background: url(media/portfolio-bg1.png);
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    --myHeight: 100vh;
+}
+.header{
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 70px;
+}
+.logo{
+    width: 10%;
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
+}
+.nav{
+    width: 40%;
+    margin: auto;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+.menuItem{
+    display: flex;
+    align-items: center;
+}
+.menuItem a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+.menuItem a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #A44CD3;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.menuItem a:hover::after {
+    width: 100%;
+
+}
+.rightNav{
+    display: flex;
+    width: 20%;
+    margin: auto;
+}
+.navbtns{
+    display: flex;
+    width: 45%;
+    min-width: 70px;
+    height: 30px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin: 0 10px;
+    cursor: pointer;
+    border: rgb(197, 83, 182) 2px solid;
+    background: transparent;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.navbtns a{
+    text-decoration: none;
+    color: white;
+}
+.navbtns::before{
+    content: "";
+    width: 8.7%;
+    min-width: 75px;
+    height: 30px;
+    background: rgb(197, 83, 182);
+    border-radius: 6px;
+    position: absolute;
+    z-index: -1;
+    transition: width .5s;
+}
+.link{
+    border-color: rgb(68, 144, 211);
+}
+.link::before{
+    background: rgb(68, 144, 211);
+}
+.navbtns:hover::before{
+    min-width: 0px;
+    width: 0%;
+}
+.link:hover a{
+    color: rgb(68, 144, 211);
+}
+.git:hover a{
+    color: rgb(197, 83, 182);
+}
+.star{
+    left: 10%;
+    background: url(media/star.png) no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 155px;
+    transition: height 4s;
+}
+.star:hover{
+    height: 100px;
+}
+.sph{
+    background: url(media/sphere.png) no-repeat;
+}
+.psph{
+    background: url(media/sphere2.png) no-repeat;
+}
+.sphere{
+    background-size: contain;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    transition: top 2s;
+}
+.s1{
+    top: 460px;
+    left: 580px;
+}
+.s2{
+    width: 10px;
+    height: 10px;
+    top: 460px;
+    left: 630px;
+}
+.sp1{
+    top: 400px;
+    left: 580px;
+}
+.sp2{
+    width: 17px;
+    height: 17px;
+    top: 350px;
+    left: 580px;
+}
+.sp3{
+    width: 25px;
+    height: 25px;
+    top: 470px;
+    left: 680px;
+}
+.s3{
+    width: 20px;
+    height: 20px;
+    top: 380px;
+    left: 750px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100%-70px);
+}
+.sections{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    align-items: center;
+}
+.content{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+.intro{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.world{
+    color: rgb(197, 83, 182);
+    font-size: 30px;
+    font-weight: bold;
+    width: max-content;
+    margin: 0;
+}
+.name{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+.pass{
+    font-size: 25px;
+}
+.what{
+    color: rgb(197, 83, 182);
+}
+.avatar{
+    background: url(media/3dobj.png) no-repeat;
+    background-size: contain;
+    height: 450px;
+    width: 450px;
+    margin: 45px 0px;
+    transition: height 3s;
+    box-sizing: border-box;
+}
+.avatar:hover{
+    height: 380px;
+}
+.line{
+    display: inline;
+    position: absolute;
+    background: white;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 5s;
+    z-index: -2;
+}
+.sections h1, .sections p{
+    margin: 10px 50px;
+}
+.skillbox{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    min-width: 280px;
+    height: max-content;
+    background: rgba(220, 220, 220, .5);
+    border-radius: 10px;
+    transition: all 2s,box-shadow 1s;
+    margin: 20px;
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+}
+.skill:hover{
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    background: rgba(120, 120, 125, 0.5);
+    transform: translateY(-15px);
+}
+.skill h1, .skill p{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.space{
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    transition: height 2s;
+}
+.spaceup{
+    height: 15vh;
+}
+.no-space{
+    height: 0px;
+}
+#techno{
+    overflow: hidden;
+}
+#techbox{
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+.tech{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 150px;
+    margin: 20px;
+    color: white;
+    border-radius: 10px;
+    transition: transform 1s ease;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.tech span{
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
+}
+#projectbox{
+display: flex;
+}
+  .project {
+    height: 270px;
+    width: 190px;
+    margin: 60px;
+    position: relative;
+    cursor: pointer;
+  
+    &:hover {
+      .card {
+        filter: blur(1.5px);
+        background-size: 155% 135%;
+      }
+      .title {
+        color: rgba(255, 255, 255, 0.2);
+      }
+      .border {
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
+      .slide {
+        bottom: 0px;
+      }
+      .ring:before,
+      .ring:after {
+        transform: translateX(-50%) translateY(-50%) rotate(310deg);
+      }
+    }
+  }
+  .ring,
+  .card,
+  .border,
+  .slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ring {
+    color: #fffbf1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 170px;
+  }
+  
+  .card {
+    background: #f0ead6;
+    position: relative;
+    transition: all 1s;
+    height: 270px;
+    width: 190px;
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+  
+  .card1 {
+    background-image: url("media/calc.png");
+    background-repeat: no-repeat;
+    background-size: 114% 114%;
+    background-position: -15px -22px;
+  }
+  
+  .card2 {
+    background-image: url("media/cheetay.png");
+    background-size: 250% 100%;
+    background-position: -84px;
+  }
+  
+  .card3 {
+    background-image: url("https://assets.codepen.io/489403/egypt.jpg");
+    background-repeat: no-repeat;
+    background-size: 140% 100%;
+  }
+  
+  .ring:before,
+  .ring:after {
+    content: "";
+    padding: 0.7em 0.4em;
+    position: absolute;
+    left: 50%;
+    width: 115%;
+    top: 50%;
+    display: block;
+    border: 5px solid #50c9c3;
+    border-radius: 50%;
+    transition: transform 1s;
+    transform: translateX(-50%) translateY(-50%) rotate(50deg);
+  }
+  
+  .ring:before {
+    border-color: rgb(235, 235, 235) rgb(235, 235, 235) rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .ring:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(235, 235, 235)
+      rgb(235, 235, 235);
+  }
+  .title {
+    font-size: 26px;
+    font-weight: 700;
+    transition: all 1s;
+    top: 0;
+  }
+  
+  .para {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+  .border {
+      position: absolute;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      height: 260px;
+      width: 180px;
+      transition: border 1s;
+      overflow: hidden;
+  }
+  
+  .slide {
+    height: 260px;
+    width: 180px;
+    position: absolute;
+    border: 1px solid black;
+    bottom: -270px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: bottom 1s;
+    flex-direction: column;
+  }
+  .mediaLinks{
+    display: flex;
+  }
+  #github{
+    background: url(media/github.png) no-repeat;
+    background-size: contain;
+  }
+  #linkedin{
+    background: url(media/linkedin.png) no-repeat;
+    background-size: contain;
+  }
+  .mdlink{
+    background-color: rgba(230,230,230,0.5) !important;
+    display: flex;
+    width: 150px;
+    border-radius: 10px;
+    height: 150px;
+    margin: 20px;
+    transition: all 1s;
+  }
+  .mdlink:hover{
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    transform: translateY(-15px);
+  }
+  .footer {
+    color: white;
+    text-align: center;
+    width: 100vw;
+    height: max-content;
+}
+#hspace{
+    display: none;
+}
+@media (max-width: 780px) {
+.nav{
+    display: none;
+}
+.rightNav{
+    width: max-content;
+}
+.navbtns{
+    min-width: 90px;
+}
+.navbtns::before{
+    min-width: 95px;
+}
+.content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.avatar{
+    width: 300px;
+    height: 300px;
+}
+.star{
+    top: 100px;
+}
+#hspace{
+    display: flex;
+}
+.sphere{
+    display: none;
+}
+.skill{
+    width: 70%;
+    height: max-content;
+}
+.skill p{
+    text-align: center;
+}
+.skill h1{
+    white-space: nowrap;
+}
+
+}
